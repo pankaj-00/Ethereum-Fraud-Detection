@@ -1,0 +1,23 @@
+div h1{
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+div input{
+    min-width: 300px;
+}
+
+div input:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+div button{
+    text-decoration: none;
+    background-color: whitesmoke;
+    outline: none;
+    box-shadow: none;
+    border: 2px solid black;
+    margin: 0px 10px 0px 10px;
+    width: fit-content;
+}
