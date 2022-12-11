@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+
 //Components
 import Input from "./Components/Input/Input";
-
+import Background from "./Components/Background/Background";
 //CSS files
 import "./App.css";
 
@@ -27,7 +28,9 @@ function App() {
 
   return (
   <div className="App">
+    <Background>
     <Input data = {data}/>
+    </Background>
   </div>);
 }
 
