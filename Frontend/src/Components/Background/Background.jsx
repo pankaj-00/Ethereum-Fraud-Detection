@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import Particles from "react-particles";
+import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
 const Background = () => {
@@ -49,7 +49,7 @@ const Background = () => {
                         },
                         repulse: {
                             distance: 200,
-                            duration: 0.4,
+                            duration: 1.5,
                         },
                     },
                 },
@@ -74,15 +74,15 @@ const Background = () => {
                             default: "bounce",
                         },
                         random: false,
-                        speed: 6,
+                        speed: 3,
                         straight: false,
                     },
                     number: {
                         density: {
                             enable: true,
-                            area: 800,
+                            area: 1000,
                         },
-                        value: 80,
+                        value: 40,
                     },
                     opacity: {
                         value: 0.5,

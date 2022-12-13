@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Meter from "../Meter/Meter"
 
 //CSS Files
 import "./input.css"
@@ -18,21 +19,20 @@ const Input = (props) => {
       'Accept': 'application/json',
     },
     body: JSON.stringify(address)
-  }).then(res=> console.log(res.json())).then(res=>{
-    console.log(res)
-  })
+  }).then(res=> console.log(res.json().then(res =>setFraud(res.result)))
+  )
   }
    
-  // console.log(fraud)
+  console.log(fraud)
     
     return (
     <div>
-      <h1>Ethereum Fraud Detection</h1>
-      <div>
-        <input type="text" placeholder='Address' onChange={(e)=>{ setAddress(JSON.stringify(e.target.value))}} required = "required"/>
-        <button onClick={handlePrediction} >Predict</button>
+      <h1 className='text-white text-[3rem] text-center font-bold Poppins my-[3em]'>Ethereum Fraud Detection</h1>
+      <div className='flex justify-center w-full Poppins'>
+        <input className='w-1/2 p-2 rounded-sm input font-bold bg-slate-800 text-white' type="text" placeholder='Address' onChange={(e)=>{setAddress(JSON.stringify(e.target.value))}} required = "required"/>
+        <button className='mx-2 p-2 text-white bg-cyan-600 rounded md font-bold' onClick={handlePrediction} >Predict</button>
       </div>
-      
+      {fraud ? <Meter fraud = {fraud}/> : null}
     </div>
   )
 }

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 //Components
 import Input from "./Components/Input/Input";
 import Background from "./Components/Background/Background";
+
 //CSS files
 import "./App.css";
 
@@ -32,6 +33,7 @@ function App() {
     <div className="cont">
     <Input data = {data}/>
     </div>
+   
   </div>);
 }
 
