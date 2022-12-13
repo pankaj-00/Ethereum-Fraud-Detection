@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import Particles from "react-tsparticles";
+import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 
 const Background = () => {
@@ -21,12 +21,16 @@ const Background = () => {
             init={particlesInit}
             loaded={particlesLoaded}
             options={{
+                fullScreen:{
+                  "enable" : true,
+                  "zIndex" : -1,
+                },
                 background: {
                     color: {
-                        value: "#12181A",
-                    },
+                        value: "#0D1315",
+                    },   
                 },
-                fpsLimit: 60,
+                fpsLimit: 120,
                 interactivity: {
                     events: {
                         onClick: {
@@ -51,14 +55,14 @@ const Background = () => {
                 },
                 particles: {
                     color: {
-                        value: "#0F4051",
+                        value: "#137A9C",
                     },
                     links: {
-                        color: "#0DB5EF",
+                        color: "#137A9C",
                         distance: 150,
                         enable: true,
                         opacity: 0.5,
-                        width: 1.5,
+                        width: 1,
                     },
                     collisions: {
                         enable: true,
@@ -81,7 +85,7 @@ const Background = () => {
                         value: 80,
                     },
                     opacity: {
-                        value: 1,
+                        value: 0.5,
                     },
                     shape: {
                         type: "circle",
@@ -94,6 +98,6 @@ const Background = () => {
             }}
         />
     );
-};
+}
 
 export default Background;

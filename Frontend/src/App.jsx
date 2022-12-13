@@ -28,8 +28,10 @@ function App() {
 
   return (
   <div className="App">
-    <Background/>
+    <Background className="back"/>
+    <div className="cont">
     <Input data = {data}/>
+    </div>
   </div>);
 }
 
